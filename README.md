@@ -1,13 +1,9 @@
 # 🌌 Blackhole VPN Configs
-
-(_/)
-( ••)
+```
+(\__/)
+( •_•)
 / >🍪 cookie for you
-
-perl
-Copy
-Edit
-
+```
 ---
 
 ## 🇳🇱 Netherlands
