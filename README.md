@@ -24,7 +24,6 @@
 🔒 **Full Tunnel** – All traffic  
 [IT🇮🇹 Full](https://raw.githubusercontent.com/SHAMPOO-SIR-E-SEHAT/hehehe/main/Blackhole/IT%F0%9F%87%AE%F0%9F%87%B9.json)
 
-![Untitled](https://github.com/user-attachments/assets/7393c7c2-89c3-40b4-9ad3-3b2a66aebc2a)
 
 ---
 
