@@ -2,9 +2,9 @@
 
 ---
 
-##🇩🇪 Germany
+## 🇩🇪 Germany
 
-🌀 **Split Tunnel**
+🌀 **Split Tunnel** 
 [DE🇩🇪ₛₚₗᵢₜ](https://raw.githubusercontent.com/SHAMPOO-SIR-E-SEHAT/hehehe/refs/heads/main/Blackhole/DE%F0%9F%87%A9%F0%9F%87%AA%20%E2%82%9B%E2%82%9A%E2%82%97%E1%B5%A2%E2%82%9C.json#DE🇩🇪ₛₚₗᵢₜ)
 
 🔒 **Full Tunnel** – All traffic  
