@@ -3,8 +3,7 @@
 (\__/)
 ( •_•)
 / >🍪 cookie for you
-
-
+---
 ## 🇳🇱 Netherlands
 
 🌀 **Split Tunnel** – Selected apps only  
