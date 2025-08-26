@@ -1,7 +1,8 @@
 # 🌌 Blackhole VPN Configs
 
-> Bypass censorship, NET MELLI in my ass.
-
+(\__/)
+( •_•)
+/ >🍪 cookie for you
 ---
 
 ## 🇳🇱 Netherlands
