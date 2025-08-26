@@ -1,6 +1,6 @@
 # 🌌 Blackhole VPN Configs
 
-> Bypass censorship, pick your vibe.
+> Bypass censorship, NET MELLI in my ass.
 
 ---
 
