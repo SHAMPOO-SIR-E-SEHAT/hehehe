@@ -1,9 +1,15 @@
 # 🌌 Blackhole VPN Configs
 
-(\__/)
-( •_•)
+(_/)
+( ••)
 / >🍪 cookie for you
+
+perl
+Copy
+Edit
+
 ---
+
 ## 🇳🇱 Netherlands
 
 🌀 **Split Tunnel** – Selected apps only  
@@ -24,4 +30,4 @@
 
 ---
 
-*🌀 = Split Tunnel · 🔒 = Full Tunnel*  
+*🌀 = Split Tunnel · 🔒 = Full Tunnel*
