@@ -389,59 +389,68 @@
       }
     },
     {
-      "protocol": "vless",
-      "settings": {
-        "vnext": [
-          {
-            "address": "91.98.21.125",
-            "port": 80,
-            "users": [
-              {
-                "email": "",
-                "id": "Free_HTTPCustom",
-                "level": 0,
-                "flow": "",
-                "encryption": ""
-              }
-            ]
-          }
-        ]
-      },
-      "tag": "user-proxy",
       "mux": {
-        "xudpProxyUDP443": "allow",
         "enabled": false,
-        "xudpConcurrency": 128,
-        "concurrency": 50
+        "concurrency": 50,
+        "xudpProxyUDP443": "allow",
+        "xudpConcurrency": 128
       },
+      "protocol": "vless",
       "streamSettings": {
+        "realitySettings": {
+          "spiderX": "",
+          "serverName": "refersion.com",
+          "publicKey": "lQbgwNDYw6Zbjdim0JtXUarzb-3GSjDvtX6FJYZD9Qo",
+          "show": false,
+          "shortId": "",
+          "fingerprint": "firefox"
+        },
+        "security": "reality",
+        "network": "tcp",
         "tcpSettings": {
           "header": {
             "type": "none"
           }
         },
-        "network": "tcp",
         "sockopt": {
           "dialerProxy": "chain1-fragment"
         }
-      }
+      },
+      "settings": {
+        "vnext": [
+          {
+            "port": 2090,
+            "users": [
+              {
+                "encryption": "none",
+                "flow": "",
+                "email": "",
+                "level": 8,
+                "id": "5b5596c2-1510-4d5e-9747-32b239e5a9cb"
+              }
+            ],
+            "address": "91.99.58.127"
+          }
+        ]
+      },
+      "tag": "user-proxy"
     },
     {
-      "protocol": "freedom",
       "settings": {
         "userLevel": 8,
         "fragment": {
-          "interval": "10-100",
+          "length": "80-250",
           "packets": "tlshello",
-          "length": "80-250"
+          "interval": "10-100"
         }
       },
-      "tag": "user-fragment",
       "streamSettings": {
         "sockopt": {
           "tcpNoDelay": true
         }
-      }
+      },
+      "protocol": "freedom",
+      "tag": "user-fragment"
     }
   ],
   "routing": {
@@ -525,20 +534,20 @@
   "policy": {
     "levels": {
       "8": {
-        "handshake": 4,
-        "statsUserUplink": false,
-        "bufferSize": 0,
         "uplinkOnly": 1,
-        "downlinkOnly": 1,
+        "handshake": 4,
+        "connIdle": 30,
         "statsUserDownlink": false,
-        "connIdle": 30
+        "bufferSize": 0,
+        "statsUserUplink": false,
+        "downlinkOnly": 1
       }
     },
     "system": {
       "statsOutboundDownlink": true,
       "statsInboundDownlink": true,
-      "statsOutboundUplink": true,
-      "statsInboundUplink": true
+      "statsInboundUplink": true,
+      "statsOutboundUplink": true
     }
   }
 }
