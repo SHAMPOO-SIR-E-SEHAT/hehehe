@@ -389,59 +389,68 @@
       }
     },
     {
-      "protocol": "vless",
-      "settings": {
-        "vnext": [
-          {
-            "address": "91.98.21.125",
-            "port": 80,
-            "users": [
-              {
-                "email": "",
-                "id": "Free_HTTPCustom",
-                "level": 0,
-                "flow": "",
-                "encryption": ""
-              }
-            ]
-          }
-        ]
-      },
-      "tag": "user-proxy",
       "mux": {
-        "xudpProxyUDP443": "allow",
         "enabled": false,
-        "xudpConcurrency": 128,
-        "concurrency": 50
+        "concurrency": 50,
+        "xudpProxyUDP443": "allow",
+        "xudpConcurrency": 128
       },
+      "protocol": "vless",
       "streamSettings": {
+        "realitySettings": {
+          "spiderX": "",
+          "serverName": "refersion.com",
+          "publicKey": "lQbgwNDYw6Zbjdim0JtXUarzb-3GSjDvtX6FJYZD9Qo",
+          "show": false,
+          "shortId": "",
+          "fingerprint": "firefox"
+        },
+        "security": "reality",
+        "network": "tcp",
         "tcpSettings": {
           "header": {
             "type": "none"
           }
         },
-        "network": "tcp",
         "sockopt": {
           "dialerProxy": "chain1-fragment"
         }
-      }
+      },
+      "settings": {
+        "vnext": [
+          {
+            "port": 2090,
+            "users": [
+              {
+                "encryption": "none",
+                "flow": "",
+                "email": "",
+                "level": 8,
+                "id": "5b5596c2-1510-4d5e-9747-32b239e5a9cb"
+              }
+            ],
+            "address": "91.99.58.127"
+          }
+        ]
+      },
+      "tag": "user-proxy"
     },
     {
-      "protocol": "freedom",
       "settings": {
         "userLevel": 8,
         "fragment": {
-          "interval": "10-100",
+          "length": "80-250",
           "packets": "tlshello",
-          "length": "80-250"
+          "interval": "10-100"
         }
       },
-      "tag": "user-fragment",
       "streamSettings": {
         "sockopt": {
           "tcpNoDelay": true
         }
-      }
+      },
+      "protocol": "freedom",
+      "tag": "user-fragment"
     }
   ],
   "routing": {
@@ -463,29 +472,25 @@
       {
         "type": "field",
         "outboundTag": "user-proxy",
-        "domain": [
-          "telegram.org",
-          "t.me",
-          "youtube.com",
-          "googlevideo.com",
-          "ytimg.com",
-          "instagram.com",
-          "cdninstagram.com"
-        ]
-      },
-      {
-        "type": "field",
-        "outboundTag": "user-proxy",
         "ip": [
-          "149.154.160.0/20",
+          "91.105.192.0/23",
           "91.108.4.0/22",
           "91.108.8.0/22",
           "91.108.12.0/22",
           "91.108.16.0/22",
-          "91.108.56.0/22",
-          "172.217.0.0/16",
-          "142.250.0.0/16",
-          "157.240.0.0/16"
+          "91.108.20.0/22",
+          "91.108.56.0/23",
+          "91.108.58.0/23",
+          "95.161.64.0/20",
+          "149.154.160.0/21",
+          "149.154.168.0/22",
+          "149.154.172.0/22",
+          "185.76.151.0/24",
+          "2001:67c:4e8::/48",
+          "2001:b28:f23c::/48",
+          "2001:b28:f23d::/48",
+          "2001:b28:f23f::/48",
+          "2a0a:f280:203::/48"
         ]
       },
       {
@@ -553,20 +558,20 @@
   "policy": {
     "levels": {
       "8": {
-        "handshake": 4,
-        "statsUserUplink": false,
-        "bufferSize": 0,
         "uplinkOnly": 1,
-        "downlinkOnly": 1,
+        "handshake": 4,
+        "connIdle": 30,
         "statsUserDownlink": false,
-        "connIdle": 30
+        "bufferSize": 0,
+        "statsUserUplink": false,
+        "downlinkOnly": 1
       }
     },
     "system": {
       "statsOutboundDownlink": true,
       "statsInboundDownlink": true,
-      "statsOutboundUplink": true,
-      "statsInboundUplink": true
+      "statsInboundUplink": true,
+      "statsOutboundUplink": true
     }
   }
 }
