@@ -24,8 +24,8 @@
         ]
       },
       {
-        "skipFallback": false,
-        "address": "8.8.8.8"
+        "address": "8.8.8.8",
+        "skipFallback": false
       }
     ],
     "tag": "dns-query",
@@ -390,52 +390,58 @@
     },
     {
       "mux": {
-        "enabled": false,
-        "concurrency": 50,
+        "xudpConcurrency": 128,
         "xudpProxyUDP443": "allow",
-        "xudpConcurrency": 128
+        "enabled": false,
+        "concurrency": 50
       },
-      "protocol": "vless",
       "streamSettings": {
         "realitySettings": {
-          "spiderX": "",
-          "serverName": "refersion.com",
+          "fingerprint": "firefox",
+          "shortId": "",
           "publicKey": "lQbgwNDYw6Zbjdim0JtXUarzb-3GSjDvtX6FJYZD9Qo",
           "show": false,
-          "shortId": "",
-          "fingerprint": "firefox"
+          "serverName": "refersion.com",
+          "spiderX": ""
         },
         "security": "reality",
-        "network": "tcp",
         "tcpSettings": {
           "header": {
             "type": "none"
           }
         },
+        "network": "tcp",
         "sockopt": {
           "dialerProxy": "chain1-fragment"
         }
       },
+      "protocol": "vless",
       "settings": {
         "vnext": [
           {
-            "port": 2090,
+            "address": "91.99.58.127",
             "users": [
               {
                 "encryption": "none",
-                "flow": "",
                 "email": "",
                 "level": 8,
-                "id": "5b5596c2-1510-4d5e-9747-32b239e5a9cb"
+                "id": "5b5596c2-1510-4d5e-9747-32b239e5a9cb",
+                "flow": ""
               }
             ],
-            "address": "91.99.58.127"
+            "port": 2090
           }
         ]
       },
       "tag": "user-proxy"
     },
     {
+      "streamSettings": {
+        "sockopt": {
+          "tcpNoDelay": true
+        }
+      },
+      "protocol": "freedom",
       "settings": {
         "userLevel": 8,
         "fragment": {
@@ -444,12 +450,6 @@
           "interval": "10-100"
         }
       },
-      "streamSettings": {
-        "sockopt": {
-          "tcpNoDelay": true
-        }
-      },
-      "protocol": "freedom",
       "tag": "user-fragment"
     }
   ],
@@ -562,20 +562,20 @@
   "policy": {
     "levels": {
       "8": {
-        "uplinkOnly": 1,
-        "handshake": 4,
-        "connIdle": 30,
-        "statsUserDownlink": false,
         "bufferSize": 0,
         "statsUserUplink": false,
-        "downlinkOnly": 1
+        "uplinkOnly": 1,
+        "downlinkOnly": 1,
+        "statsUserDownlink": false,
+        "connIdle": 30,
+        "handshake": 4
       }
     },
     "system": {
-      "statsOutboundDownlink": true,
       "statsInboundDownlink": true,
-      "statsInboundUplink": true,
-      "statsOutboundUplink": true
+      "statsOutboundUplink": true,
+      "statsOutboundDownlink": true,
+      "statsInboundUplink": true
     }
   }
 }
