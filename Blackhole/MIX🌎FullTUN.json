@@ -1640,7 +1640,7 @@
     }
   },
 {
-  "remarks": "DE🇩🇪FullTUN",
+  "remarks": "👽 Anonymous Phantom + X Chain",
   "log": {
     "loglevel": "warning",
     "dnsLog": false,
@@ -2030,58 +2030,60 @@
       }
     },
     {
-      "protocol": "vless",
-      "tag": "user-proxy",
       "mux": {
-        "enabled": false,
+        "xudpConcurrency": 128,
         "concurrency": 50,
-        "xudpProxyUDP443": "allow",
-        "xudpConcurrency": 128
+        "enabled": false,
+        "xudpProxyUDP443": "allow"
       },
+      "tag": "user-proxy",
+      "protocol": "vless",
       "settings": {
         "vnext": [
           {
-            "address": "185.146.173.39",
+            "address": "63.141.128.14",
+            "port": 80,
             "users": [
               {
-                "flow": "",
-                "level": 8,
                 "encryption": "none",
+                "level": 8,
+                "id": "c7f22cff-c624-468e-b1e9-a56f7f63d220",
                 "email": "",
-                "id": "Parsashonam-303"
+                "flow": ""
               }
-            ],
-            "port": 8880
+            ]
           }
         ]
       },
       "streamSettings": {
-        "httpUpgradeSettings": {
-          "host": "De.Parsashonam.CfD.",
-          "path": "/Parsashonam-Parsashonam-Parsashonam/?ed=2056"
+        "network": "ws",
+        "wsSettings": {
+          "path": "/Join-ZEDMODEON-ZEDMODEON-ZEDMODEON-bia-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON",
+          "headers": {
+            "Host": "a.joIn.zEdMoDeOn.oNl."
+          }
         },
-        "network": "httpupgrade",
         "sockopt": {
           "dialerProxy": "chain1-fragment"
         }
       }
     },
     {
+      "tag": "user-fragment",
+      "protocol": "freedom",
+      "settings": {
+        "fragment": {
+          "interval": "10-100",
+          "packets": "tlshello",
+          "length": "80-250"
+        },
+        "userLevel": 8
+      },
       "streamSettings": {
         "sockopt": {
           "tcpNoDelay": true
         }
-      },
-      "tag": "user-fragment",
-      "settings": {
-        "fragment": {
-          "length": "80-250",
-          "packets": "tlshello",
-          "interval": "10-100"
-        },
-        "userLevel": 8
-      },
-      "protocol": "freedom"
+      }
     }
   ],
   "routing": {
@@ -2165,13 +2167,13 @@
   "policy": {
     "levels": {
       "8": {
-        "downlinkOnly": 1,
-        "connIdle": 30,
+        "uplinkOnly": 1,
         "statsUserUplink": false,
-        "bufferSize": 0,
         "handshake": 4,
+        "downlinkOnly": 1,
         "statsUserDownlink": false,
-        "uplinkOnly": 1
+        "connIdle": 30,
+        "bufferSize": 0
       }
     },
     "system": {
