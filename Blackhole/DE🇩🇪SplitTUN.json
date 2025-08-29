@@ -389,51 +389,41 @@
       }
     },
     {
-      "mux": {
-        "xudpConcurrency": 128,
-        "xudpProxyUDP443": "allow",
-        "enabled": false,
-        "concurrency": 50
-      },
-      "streamSettings": {
-        "realitySettings": {
-          "fingerprint": "firefox",
-          "shortId": "",
-          "publicKey": "lQbgwNDYw6Zbjdim0JtXUarzb-3GSjDvtX6FJYZD9Qo",
-          "show": false,
-          "serverName": "refersion.com",
-          "spiderX": ""
-        },
-        "security": "reality",
-        "tcpSettings": {
-          "header": {
-            "type": "none"
-          }
-        },
-        "network": "tcp",
-        "sockopt": {
-          "dialerProxy": "chain1-fragment"
-        }
-      },
       "protocol": "vless",
+      "tag": "user-proxy",
+      "mux": {
+        "enabled": false,
+        "concurrency": 50,
+        "xudpProxyUDP443": "allow",
+        "xudpConcurrency": 128
+      },
       "settings": {
         "vnext": [
           {
-            "address": "91.99.58.127",
+            "address": "185.146.173.39",
             "users": [
               {
+                "flow": "",
+                "level": 8,
                 "encryption": "none",
                 "email": "",
-                "level": 8,
-                "id": "5b5596c2-1510-4d5e-9747-32b239e5a9cb",
-                "flow": ""
+                "id": "Parsashonam-303"
               }
             ],
-            "port": 2090
+            "port": 8880
           }
         ]
       },
-      "tag": "user-proxy"
+      "streamSettings": {
+        "httpUpgradeSettings": {
+          "host": "De.Parsashonam.CfD.",
+          "path": "/Parsashonam-Parsashonam-Parsashonam/?ed=2056"
+        },
+        "network": "httpupgrade",
+        "sockopt": {
+          "dialerProxy": "chain1-fragment"
+        }
+      }
     },
     {
       "streamSettings": {
@@ -441,16 +431,16 @@
           "tcpNoDelay": true
         }
       },
-      "protocol": "freedom",
+      "tag": "user-fragment",
       "settings": {
-        "userLevel": 8,
         "fragment": {
           "length": "80-250",
           "packets": "tlshello",
           "interval": "10-100"
-        }
+        },
+        "userLevel": 8
       },
-      "tag": "user-fragment"
+      "protocol": "freedom"
     }
   ],
   "routing": {
@@ -562,13 +552,13 @@
   "policy": {
     "levels": {
       "8": {
-        "bufferSize": 0,
-        "statsUserUplink": false,
-        "uplinkOnly": 1,
         "downlinkOnly": 1,
-        "statsUserDownlink": false,
         "connIdle": 30,
-        "handshake": 4
+        "statsUserUplink": false,
+        "bufferSize": 0,
+        "handshake": 4,
+        "statsUserDownlink": false,
+        "uplinkOnly": 1
       }
     },
     "system": {
