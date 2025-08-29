@@ -24,8 +24,8 @@
         ]
       },
       {
-        "skipFallback": false,
-        "address": "8.8.8.8"
+        "address": "8.8.8.8",
+        "skipFallback": false
       }
     ],
     "tag": "dns-query",
@@ -389,58 +389,60 @@
       }
     },
     {
-      "tag": "user-proxy",
-      "protocol": "vless",
-      "streamSettings": {
-        "httpUpgradeSettings": {
-          "path": "/Parsashonam-Parsashonam-Parsashonam/?ed=2056",
-          "host": "De.Parsashonam.CfD."
-        },
-        "network": "httpupgrade",
-        "sockopt": {
-          "dialerProxy": "chain1-fragment"
-        }
-      },
       "mux": {
         "xudpConcurrency": 128,
+        "concurrency": 50,
         "enabled": false,
-        "xudpProxyUDP443": "allow",
-        "concurrency": 50
+        "xudpProxyUDP443": "allow"
       },
+      "tag": "user-proxy",
+      "protocol": "vless",
       "settings": {
         "vnext": [
           {
-            "port": 8880,
+            "address": "63.141.128.14",
+            "port": 80,
             "users": [
               {
+                "encryption": "none",
                 "level": 8,
+                "id": "c7f22cff-c624-468e-b1e9-a56f7f63d220",
                 "email": "",
-                "flow": "",
-                "id": "Parsashonam-303",
-                "encryption": "none"
+                "flow": ""
               }
-            ],
-            "address": "185.146.173.39"
+            ]
           }
         ]
+      },
+      "streamSettings": {
+        "network": "ws",
+        "wsSettings": {
+          "path": "/Join-ZEDMODEON-ZEDMODEON-ZEDMODEON-bia-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON",
+          "headers": {
+            "Host": "a.joIn.zEdMoDeOn.oNl."
+          }
+        },
+        "sockopt": {
+          "dialerProxy": "chain1-fragment"
+        }
       }
     },
     {
+      "tag": "user-fragment",
+      "protocol": "freedom",
       "settings": {
         "fragment": {
+          "interval": "10-100",
           "packets": "tlshello",
-          "length": "80-250",
-          "interval": "10-100"
+          "length": "80-250"
         },
         "userLevel": 8
       },
-      "protocol": "freedom",
       "streamSettings": {
         "sockopt": {
           "tcpNoDelay": true
         }
-      },
-      "tag": "user-fragment"
+      }
     }
   ],
   "routing": {
@@ -524,20 +526,20 @@
   "policy": {
     "levels": {
       "8": {
-        "connIdle": 30,
-        "statsUserDownlink": false,
-        "downlinkOnly": 1,
-        "handshake": 4,
         "uplinkOnly": 1,
-        "bufferSize": 0,
-        "statsUserUplink": false
+        "statsUserUplink": false,
+        "handshake": 4,
+        "downlinkOnly": 1,
+        "statsUserDownlink": false,
+        "connIdle": 30,
+        "bufferSize": 0
       }
     },
     "system": {
-      "statsOutboundUplink": true,
       "statsInboundDownlink": true,
-      "statsInboundUplink": true,
-      "statsOutboundDownlink": true
+      "statsOutboundUplink": true,
+      "statsOutboundDownlink": true,
+      "statsInboundUplink": true
     }
   }
 }
